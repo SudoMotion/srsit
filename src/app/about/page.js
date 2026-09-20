@@ -1,3 +1,5 @@
+import PageHeader from "@/components/PageHeader";
+
 export const metadata = {
   title: "About Us | SRS IT",
   description: "Learn more about SRS IT and our team.",
@@ -7,16 +9,12 @@ export default function AboutPage() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative bg-[#1a1a1a] py-20 text-center text-white">
-        <div className="absolute inset-0 opacity-20 bg-[url('/images/builder-grid.png')]"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-9">
-          <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-wide">About <span className="text-[#f97316]">Us</span></h1>
-          <p className="mt-4 text-neutral-300 max-w-2xl mx-auto">
-            Discover our journey, our mission, and the passionate team behind SRS IT. We build digital solutions that matter.
-          </p>
-          <div className="w-16 h-1 bg-[#f97316] mx-auto mt-6 rounded"></div>
-        </div>
-      </section>
+      <PageHeader
+        title="About"
+        highlightText="Us"
+        description="Discover our journey, our mission, and the passionate team behind SRS IT. We build digital solutions that matter."
+        backgroundImage="/images/builder-grid.png"
+      />
 
       {/* Content Section */}
       <section className="py-16 md:py-24 max-w-7xl mx-auto px-4 md:px-9 grid md:grid-cols-2 gap-12 items-center">
