@@ -28,6 +28,17 @@ const mainNavMenus = [
     ]
   },
   { 
+    label: "Products", 
+    href: "/products", 
+    isDropdown: true,
+    dropdownWidth: 'w-[325px]',
+    children: [
+      { label: "Face Recognition System", href: "/products" },
+      { label: "Wifi CCTV Camera", href: "/products" },
+      { label: "POS Printer", href: "/products" },
+    ]
+  },
+  { 
     label: "Marketing", 
     href: "/marketing", 
     isDropdown: true,
