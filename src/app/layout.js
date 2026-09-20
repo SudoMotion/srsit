@@ -1,9 +1,19 @@
-import { Inter } from "next/font/google";
+import { Barlow, Oswald } from "next/font/google";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const barlow = Barlow({ 
+  subsets: ["latin"],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-barlow',
+});
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ['500', '600', '700'],
+  variable: '--font-oswald',
+});
 
 export const metadata = {
   title: "SRS IT - Software Development Company",
@@ -13,10 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full antialiased scroll-smooth">
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
-      </head>
-      <body className={`${inter.className} bg-[#f8f9fa] min-h-full flex flex-col font-sans relative text-[#1a1a1a]`}>
+      <body className={`${barlow.variable} ${oswald.variable} bg-[#f8f9fa] min-h-full flex flex-col font-sans relative text-[#1a1a1a]`}>
         
         {/* Floating Actions */}
         <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-3">
