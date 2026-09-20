@@ -10,10 +10,10 @@ export default function AboutPage() {
     <div className="bg-white">
       {/* Hero Section */}
       <PageHeader
-        title="About"
         highlightText="Us"
         description="Discover our journey, our mission, and the passionate team behind SRS IT. We build digital solutions that matter."
-        backgroundImage="/images/builder-grid.png"
+        title="ABOUT SRS IT"
+        backgroundImage="/images/background-banner.png"
       />
 
       {/* Content Section */}
