@@ -9,6 +9,7 @@ const mainNavMenus = [
   { label: "About", href: "/about", isDropdown: false },
   { 
     label: "Services", 
+    label: "Website", 
     href: "/website", 
     isDropdown: true,
     dropdownWidth: 'w-[325px]',
@@ -17,10 +18,12 @@ const mainNavMenus = [
       { label: "Software Development", href: "/software" },
       { label: "Digital Marketing", href: "/marketing" },
       { label: "UI/UX Design", href: "/website" },
+      { label: "eCommerce Development", href: "/website" },
     ]
   },
   { 
     label: "Products", 
+    label: "Softwares", 
     href: "/software", 
     isDropdown: true,
     dropdownWidth: 'w-[325px]',
@@ -28,9 +31,31 @@ const mainNavMenus = [
       { label: "ERP Software", href: "/software" },
       { label: "HRM Software", href: "/software" },
       { label: "Inventory Management", href: "/software" },
+      { label: "Custom Software", href: "/software" },
+      { label: "ERP Solution", href: "/software" },
+    ]
+  },
+  { 
+    label: "Products", 
+    href: "/products", 
+    isDropdown: true,
+    dropdownWidth: 'w-[325px]',
+    children: [
+      { label: "Ready Software", href: "/products" },
+    ]
+  },
+  { 
+    label: "Marketing", 
+    href: "/marketing", 
+    isDropdown: true,
+    dropdownWidth: 'w-[325px]',
+    children: [
+      { label: "Digital Marketing", href: "/marketing" },
+      { label: "SEO Services", href: "/marketing" },
     ]
   },
   { label: "Team", href: "/team", isDropdown: false },
+  { label: "Careers", href: "/careers", isDropdown: false },
   { label: "Contact", href: "/contact", isDropdown: false },
 ];
 
