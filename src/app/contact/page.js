@@ -1,3 +1,4 @@
+import PageHeader from "@/components/PageHeader";
 export const metadata = {
   title: "Contact Us | SRS IT",
   description: "Get in touch with SRS IT for your next project.",
@@ -7,12 +8,7 @@ export default function ContactPage() {
   return (
     <div className="bg-[#f8f9fa] min-h-screen">
       {/* Hero Section */}
-      <section className="bg-[#1a1a1a] py-16 text-center text-white">
-        <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-wide">Contact <span className="text-[#f97316]">Us</span></h1>
-        <p className="mt-4 text-neutral-300 max-w-2xl mx-auto">
-          We'd love to hear from you. Drop us a line and we'll get back to you as soon as possible.
-        </p>
-      </section>
+      <PageHeader title="CONTACT US" />
 
       {/* Form & Info Section */}
       <section className="py-16 md:py-20 max-w-7xl mx-auto px-4 md:px-9 grid md:grid-cols-5 gap-12">

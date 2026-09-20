@@ -1,3 +1,4 @@
+import PageHeader from "@/components/PageHeader";
 export const metadata = {
   title: "Careers | SRS IT",
   description: "Join our team at SRS IT. View our current job openings.",
@@ -13,12 +14,7 @@ export default function CareersPage() {
 
   return (
     <div className="bg-[#f8f9fa] min-h-screen">
-      <section className="bg-[#1a1a1a] py-16 text-center text-white">
-        <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-wide">Join Our <span className="text-[#f97316]">Team</span></h1>
-        <p className="mt-4 text-neutral-300 max-w-2xl mx-auto">
-          Build the future of technology with us. Explore our open positions and find your next big opportunity.
-        </p>
-      </section>
+      <PageHeader title="JOIN OUR TEAM" />
 
       <section className="py-16 max-w-7xl mx-auto px-4 md:px-9">
         <div className="mb-10 text-center">

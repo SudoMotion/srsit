@@ -1,3 +1,4 @@
+import PageHeader from "@/components/PageHeader";
 export const metadata = {
   title: "Digital Marketing | SRS IT",
   description: "Boost your online presence with our digital marketing services.",
@@ -13,12 +14,7 @@ export default function MarketingPage() {
 
   return (
     <div className="bg-white min-h-screen">
-      <section className="bg-[#1a1a1a] py-16 text-center text-white">
-        <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-wide">Digital <span className="text-[#f97316]">Marketing</span></h1>
-        <p className="mt-4 text-neutral-300 max-w-2xl mx-auto">
-          Data-driven strategies to maximize your ROI and grow your brand online.
-        </p>
-      </section>
+      <PageHeader title="DIGITAL MARKETING" />
 
       <section className="py-16 max-w-7xl mx-auto px-4 md:px-9">
         <div className="grid md:grid-cols-2 gap-8">

@@ -1,3 +1,4 @@
+import PageHeader from "@/components/PageHeader";
 import Image from "next/image";
 
 export const metadata = {
@@ -15,12 +16,7 @@ export default function TeamPage() {
 
   return (
     <div className="bg-[#f8f9fa] min-h-screen">
-      <section className="bg-[#1a1a1a] py-16 text-center text-white">
-        <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-wide">Our <span className="text-[#f97316]">Team</span></h1>
-        <p className="mt-4 text-neutral-300 max-w-2xl mx-auto">
-          Meet the passionate professionals dedicated to your success.
-        </p>
-      </section>
+      <PageHeader title="OUR TEAM" />
 
       <section className="py-16 max-w-7xl mx-auto px-4 md:px-9">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
