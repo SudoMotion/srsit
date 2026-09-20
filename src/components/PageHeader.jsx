@@ -4,26 +4,25 @@ export default function PageHeader({
   title, 
   highlightText, 
   description, 
-  backgroundImage = '/images/builder-grid.png' 
+  backgroundImage = '/images/background-banner.png' 
 }) {
   return (
-    <section className="relative bg-[#1a1a1a] py-20 text-center text-white">
+    <section className="relative flex items-center justify-center py-10 md:py-16 text-center text-white min-h-[200px]">
       <div 
-        className="absolute inset-0 opacity-20 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('${backgroundImage}')` }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
       ></div>
-      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-9">
-        <h1 className="text-4xl md:text-5xl font-bold uppercase tracking-wide">
+      
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-9 w-full">
+        <h1 className="text-center font-display text-lg font-bold uppercase tracking-wide text-white">
           {title} {highlightText && <span className="text-[#f97316]">{highlightText}</span>}
         </h1>
         {description && (
-          <p className="mt-4 text-neutral-300 max-w-2xl mx-auto">
+          <p className="text-xs md:text-sm mt-4 text-neutral-300 max-w-2xl mx-auto">
             {description}
           </p>
         )}
-        <div className="w-16 h-1 bg-[#f97316] mx-auto mt-6 rounded"></div>
       </div>
     </section>
   );
 }
-
