@@ -33,3 +33,24 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer components {
+  .section-divider {
+      @apply mx-auto h-1 w-20 bg-brand-orange;
+  }
+  .section-divider-wide {
+      @apply mx-auto h-1.5 w-28 bg-brand-orange;
+  }
+  .btn-primary {
+      @apply inline-flex items-center justify-center bg-brand-orange px-6 py-2.5 text-xs font-bold uppercase tracking-[0.18em] text-white transition hover:bg-brand-orange-hover;
+  }
+  .btn-outline {
+      @apply inline-flex items-center justify-center border-2 border-brand-black bg-transparent px-6 py-2.5 text-xs font-bold uppercase tracking-[0.18em] text-brand-black transition hover:bg-brand-black hover:text-white;
+  }
+  .btn-outline-light {
+      @apply inline-flex items-center justify-center border-2 border-white bg-transparent px-6 py-2.5 text-xs font-bold uppercase tracking-[0.18em] text-white transition hover:bg-brand-orange hover:border-brand-orange;
+  }
+  .btn-secondary {
+      @apply inline-flex items-center justify-center bg-brand-orange px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white transition hover:bg-brand-orange-hover md:text-sm;
+  }
+}

@@ -1,6 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from "next/image";
+import PageHeader from "@/components/PageHeader";
 import FooterSocialLink from '@/components/FooterSocialLink';
+
+export const metadata = {
+  title: "Our Team | SRS IT",
+  description: "Meet the experts behind SRS IT.",
+};
 
 // Static Data
 const teamLabels = [
@@ -18,44 +25,6 @@ const teamLabels = [
     ]
   }
 ];
-
-function PageHeader({ title, highlight, description, eyebrow, hideTitle = false }) {
-  const parts = highlight && title.includes(highlight)
-    ? title.split(highlight)
-    : null;
-    
-  return (
-    <header className="border-b border-neutral-200 bg-white py-8 md:py-10">
-      <div className="max-w-7xl mx-auto p-2 md:px-9">
-        <div className="w-full text-center">
-          {eyebrow && (
-            <span className="mb-4 inline-block bg-brand-orange/10 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.18em] text-brand-orange">
-              {eyebrow}
-            </span>
-          )}
-
-          {!hideTitle && (
-            <h1 className="font-display text-2xl font-bold uppercase tracking-wide text-brand-black md:text-3xl lg:text-4xl">
-              {parts ? (
-                <>{parts[0]}<span className="text-brand-orange">{highlight}</span>{parts[1]}</>
-              ) : (
-                title
-              )}
-            </h1>
-          )}
-
-          {description && (
-            <p className={`text-sm leading-relaxed text-brand-steel md:text-base ${!hideTitle ? 'mt-3' : ''} ${description.length < 250 ? 'text-center' : 'text-left'}`}>
-              {description}
-            </p>
-          )}
-
-          <div className="section-divider mt-4"></div>
-        </div>
-      </div>
-    </header>
-  );
-}
 
 function SectionHeader({ title, eyebrow, minimal = false, align = 'center' }) {
   const alignClass = align === 'left' ? 'text-left' : align === 'right' ? 'text-right' : 'text-center';
@@ -116,27 +85,10 @@ function TeamMemberCard({ member }) {
 
 export default function TeamPage() {
   return (
-    <>
-      <header className="detail-page-banner relative w-full shrink-0 overflow-hidden" style={{ height: '160px', minHeight: '160px', maxHeight: '160px' }}>
-          <img
-              src="/images/hero-slider/slide1.jpg"
-              alt=""
-              aria-hidden="true"
-              className="pointer-events-none select-none absolute inset-0 block w-full h-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-black/50"></div>
-          <div className="absolute inset-0 flex items-center justify-center px-4">
-              <h1 className="text-center font-display text-lg font-bold uppercase tracking-wide text-white">
-                  Meet Our Team
-              </h1>
-          </div>
-      </header>
-
+    <div className="bg-[#f8f9fa] min-h-screen">
       <PageHeader 
-        title="Meet Our Team" 
-        highlight="Team" 
-        eyebrow="Team"
-        description="Passionate professionals delivering exceptional solutions." 
+        title="OUR TEAM" 
+        description="Meet the passionate professionals delivering exceptional solutions." 
       />
 
       <section className="bg-white py-12 md:py-16">
@@ -154,16 +106,16 @@ export default function TeamPage() {
           </div>
       </section>
 
-      <section className="border-t border-neutral-200 bg-brand-concrete py-10 md:py-12">
+      <section className="border-t border-neutral-200 bg-gray-50 py-10 md:py-12">
           <div className="max-w-7xl mx-auto p-2 md:px-9 text-center">
-              <h2 className="font-display text-xl font-bold uppercase tracking-wide text-brand-black md:text-2xl">Join Our Team</h2>
-              <p className="mx-auto mt-2 max-w-xl text-sm text-brand-steel">Looking for talented individuals passionate about innovation.</p>
+              <h2 className="font-display text-xl font-bold uppercase tracking-wide text-gray-900 md:text-2xl">Join Our Team</h2>
+              <p className="mx-auto mt-2 max-w-xl text-sm text-gray-600">Looking for talented individuals passionate about innovation.</p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">
-                  <Link href="/careers" className="btn-primary">Open Positions</Link>
-                  <Link href="/contact" className="btn-outline">Contact Us</Link>
+                  <Link href="/careers" className="inline-block bg-[#1a1a1a] text-white font-bold uppercase tracking-wide px-8 py-3 rounded-lg hover:bg-[#f97316] transition-colors shadow-lg">Open Positions</Link>
+                  <Link href="/contact" className="inline-block bg-white text-[#1a1a1a] border border-[#1a1a1a] font-bold uppercase tracking-wide px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors shadow-lg">Contact Us</Link>
               </div>
           </div>
       </section>
-    </>
+    </div>
   );
 }
